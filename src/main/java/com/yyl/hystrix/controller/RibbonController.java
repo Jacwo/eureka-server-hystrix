@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * author:yangyuanliang Date:2019-08-15 Time:11:00
+ * @author yangyuanliang
  **/
 @RestController
 public class RibbonController {
@@ -15,5 +15,11 @@ public class RibbonController {
     @RequestMapping("/hystrix/test")
     public String testHystrix(){
         return ribbonService.helloService();
+    }
+
+
+    @RequestMapping("/sync")
+    public String sync(){
+        return ribbonService.syncRequest();
     }
 }
